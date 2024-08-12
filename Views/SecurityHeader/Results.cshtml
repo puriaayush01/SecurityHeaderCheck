@@ -1,0 +1,27 @@
+﻿@model SecurityHeaderViewModel
+
+<h2>Results for @Model.Url</h2>
+
+<h3>Headers</h3>
+<ul>
+    @foreach (var header in Model.Headers)
+    {
+        <li>@header.Key: @header.Value</li>
+    }
+</ul>
+
+<h3>Missing Headers</h3>
+<ul>
+    @foreach (var header in Model.MissingHeaders)
+    {
+        <li>@header</li>
+    }
+</ul>
+
+<h3>Recommendations</h3>
+<ul>
+    @foreach (var recommendation in Model.Recommendations)
+    {
+        <li>@recommendation.Key: @recommendation.Value</li>
+    }
+</ul>
